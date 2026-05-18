@@ -47,7 +47,7 @@ const steps = [
 
 export default function StepsSection() {
   return (
-    <section id="steps" className="relative py-24 lg:py-32">
+    <section id="steps" className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
       <div className="absolute inset-0 mesh-gradient opacity-25 pointer-events-none" />
       <div className="relative z-10">
         <SectionHeading
@@ -56,15 +56,15 @@ export default function StepsSection() {
           highlight="3 Simple Steps"
           subtitle="Follow these video guides in order. Each step includes a detailed walkthrough."
         />
-        <div className="max-w-5xl mx-auto px-5 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-5 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 relative">
             {/* Connecting dots line */}
             <div className="hidden md:block absolute top-[52px] left-[18%] right-[18%] h-[1px]"
               style={{background:'linear-gradient(to right, #FF5C00 0%, #FF9E00 50%, #34d399 100%)', opacity:.3}} />
 
             {steps.map((step, i) => (
               <ScrollReveal key={step.step} delay={i * 0.14}>
-                <GlassCard className="p-7 h-full group relative overflow-hidden">
+                <GlassCard className="p-5 sm:p-7 h-full group relative overflow-hidden">
                   {/* Top accent bar */}
                   <div className={`absolute top-0 left-0 right-0 h-[2px] ${step.bar} opacity-0 group-hover:opacity-100 transition-opacity`} />
 

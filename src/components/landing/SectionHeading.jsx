@@ -3,7 +3,7 @@ import ScrollReveal from './ScrollReveal';
 
 export default function SectionHeading({ badge, title, highlight, subtitle }) {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-20 px-5">
+    <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-20 px-4 sm:px-5">
       {badge && (
         <ScrollReveal delay={0}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[10px] font-heading font-semibold tracking-[0.18em] uppercase text-solar mb-5">

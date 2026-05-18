@@ -79,7 +79,7 @@ export default function FAQSection() {
   const [activeCategory, setActiveCategory] = useState('account');
 
   return (
-    <section id="faq" className="relative py-24 lg:py-32">
+    <section id="faq" className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
       <SectionHeading
         badge="FAQ"
         title="Common"
@@ -87,7 +87,7 @@ export default function FAQSection() {
         subtitle="Everything you need to know about the Temu Influencer Program."
       />
 
-      <div className="max-w-3xl mx-auto px-6 lg:px-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10">
         {/* Category Tabs */}
         <ScrollReveal className="mb-8">
           <div className="flex flex-wrap gap-2 justify-center">
@@ -109,7 +109,7 @@ export default function FAQSection() {
 
         {/* FAQ List */}
         <ScrollReveal>
-          <div className="glass rounded-2xl px-6 lg:px-8">
+          <div className="glass rounded-2xl px-4 sm:px-6 lg:px-8">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCategory}

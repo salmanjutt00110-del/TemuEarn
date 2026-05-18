@@ -67,7 +67,7 @@ const platforms = [
 
 export default function PlatformsSection() {
   return (
-    <section id="platforms" className="relative py-24 lg:py-32">
+    <section id="platforms" className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
       <div className="absolute inset-0 bg-dots opacity-25 pointer-events-none" />
       <div className="relative z-10">
         <SectionHeading
@@ -76,7 +76,7 @@ export default function PlatformsSection() {
           highlight="3 Platforms"
           subtitle="You don't need a huge following. Just an active account with real engagement."
         />
-        <div className="max-w-5xl mx-auto px-5 lg:px-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="max-w-5xl mx-auto px-4 sm:px-5 lg:px-10 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           {platforms.map((p, i) => (
             <ScrollReveal key={p.name} delay={i * 0.12}>
               <GlassCard className={`p-7 h-full group relative ${p.featured ? 'border-solar/20' : ''}`}>

@@ -15,9 +15,9 @@ const benefits = [
 
 export default function CTABanner() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
+    <section className="relative py-24 lg:py-32 overflow-hidden w-full max-w-full">
       <ScrollReveal>
-        <div className="max-w-5xl mx-auto px-5 lg:px-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-5 lg:px-10">
           <div className="relative rounded-3xl overflow-hidden">
             {/* Layers */}
             <div className="absolute inset-0 bg-gradient-to-br from-solar/18 via-[#FF9E00]/10 to-solar/5" />
@@ -31,7 +31,7 @@ export default function CTABanner() {
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-solar/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-solar/20 to-transparent" />
 
-            <div className="relative z-10 p-8 lg:p-16 text-center">
+            <div className="relative z-10 p-5 sm:p-8 lg:p-16 text-center">
               {/* Icon */}
               <div className="w-14 h-14 rounded-2xl bg-solar/15 flex items-center justify-center mx-auto mb-6 border border-solar/20">
                 <TrendingUp className="w-7 h-7 text-solar" />
@@ -63,7 +63,7 @@ export default function CTABanner() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-solar to-[#FF9E00] text-white font-heading font-bold text-[15px] tracking-wide shadow-xl shadow-solar/25 hover:shadow-solar/45 transition-shadow"
+                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-solar to-[#FF9E00] text-white font-heading font-bold text-[13px] sm:text-[15px] tracking-wide shadow-xl shadow-solar/25 hover:shadow-solar/45 transition-shadow w-full sm:w-auto justify-center"
               >
                 <TrendingUp className="w-5 h-5" />
                 Join Temu Influencer Program

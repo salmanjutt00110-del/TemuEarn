@@ -15,7 +15,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
       <div className="relative z-10">
         <SectionHeading
@@ -24,8 +24,8 @@ export default function FeaturesSection() {
           highlight="Creators"
           subtitle="No experience required. If you can make a short video, you can earn with TemuEarn."
         />
-        <div className="max-w-6xl mx-auto px-5 lg:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 lg:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {features.map((f, i) => (
               <ScrollReveal key={f.title} delay={i * 0.08}>
                 <GlassCard className="p-6 h-full group">

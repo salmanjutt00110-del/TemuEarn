@@ -22,8 +22,8 @@ function WAIcon({ size = 32 }) {
 
 export default function WhatsAppSection() {
   return (
-    <section className="relative py-24 lg:py-32">
-      <div className="max-w-4xl mx-auto px-5 lg:px-10">
+    <section className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-5 lg:px-10">
         <ScrollReveal>
           <div className="relative rounded-3xl overflow-hidden">
             {/* BG layers */}
@@ -34,7 +34,7 @@ export default function WhatsAppSection() {
             {/* Orb */}
             <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-green-500/10 blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 p-8 lg:p-14 text-center">
+            <div className="relative z-10 p-5 sm:p-8 lg:p-14 text-center">
               <motion.div
                 whileHover={{ scale: 1.08, rotate: 3 }}
                 transition={{ type:'spring', stiffness:300, damping:20 }}
@@ -66,7 +66,7 @@ export default function WhatsAppSection() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-green-500 hover:bg-green-400 text-white font-heading font-bold text-[15px] tracking-wide transition-colors shadow-xl shadow-green-500/20 hover:shadow-green-500/30"
+                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-green-500 hover:bg-green-400 text-white font-heading font-bold text-[14px] sm:text-[15px] tracking-wide transition-colors shadow-xl shadow-green-500/20 hover:shadow-green-500/30"
               >
                 <WAIcon size={20} />
                 Join WhatsApp Channel

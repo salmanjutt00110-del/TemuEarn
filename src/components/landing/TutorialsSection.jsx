@@ -114,7 +114,7 @@ export default function TutorialsSection() {
   const [featured, ...rest] = tutorials;
 
   return (
-    <section id="tutorials" className="relative py-24 lg:py-32">
+    <section id="tutorials" className="relative py-24 lg:py-32 w-full max-w-full overflow-hidden">
       <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
       <div className="relative z-10">
         <SectionHeading
@@ -124,7 +124,7 @@ export default function TutorialsSection() {
           subtitle="Watch our premium tutorial series. Each video walks you through the exact process."
         />
 
-        <div className="max-w-6xl mx-auto px-5 lg:px-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-5 lg:px-10">
 
           {/* Featured large card */}
           <ScrollReveal className="mb-5">
@@ -158,7 +158,7 @@ export default function TutorialsSection() {
                 </div>
 
                 {/* Overlay content */}
-                <div className="absolute bottom-0 left-0 p-6 lg:p-10 max-w-xl">
+                <div className="absolute bottom-0 left-0 p-4 sm:p-6 lg:p-10 max-w-xl">
                   <span className="inline-block px-3 py-1 rounded-lg bg-solar/20 text-solar text-[10px] font-heading font-bold uppercase tracking-widest mb-3 border border-solar/20">
                     ⭐ Featured · {featured.category}
                   </span>
@@ -180,7 +180,7 @@ export default function TutorialsSection() {
           </ScrollReveal>
 
           {/* 3 smaller cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {rest.map((t, i) => (
               <ThumbnailCard key={t.title} tutorial={t} index={i} />
             ))}

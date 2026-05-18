@@ -133,7 +133,7 @@ export default function HeroSection() {
   useThreeBackground(canvasRef);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020202]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020202] w-full max-w-full">
 
       {/* ── Dot grid ── */}
       <div className="absolute inset-0 bg-dots opacity-40" />
@@ -142,12 +142,12 @@ export default function HeroSection() {
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 
       {/* ── Ambient orbs ── */}
-      <div className="absolute top-[15%] left-[10%] w-[480px] h-[480px] rounded-full blur-[120px] bg-solar/8 animate-orb-drift pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[8%]  w-[380px] h-[380px] rounded-full blur-[100px] bg-ember/6 animate-orb-drift pointer-events-none" style={{animationDelay:'-4s'}} />
-      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full blur-[90px] bg-[#FF9E00]/5 animate-orb-drift pointer-events-none" style={{animationDelay:'-2s'}} />
+      <div className="absolute top-[15%] left-[10%] w-[200px] sm:w-[350px] lg:w-[480px] h-[200px] sm:h-[350px] lg:h-[480px] rounded-full blur-[80px] lg:blur-[120px] bg-solar/8 animate-orb-drift pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[8%] w-[160px] sm:w-[280px] lg:w-[380px] h-[160px] sm:h-[280px] lg:h-[380px] rounded-full blur-[60px] lg:blur-[100px] bg-ember/6 animate-orb-drift pointer-events-none" style={{animationDelay:'-4s'}} />
+      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[140px] sm:w-[200px] lg:w-[280px] h-[140px] sm:h-[200px] lg:h-[280px] rounded-full blur-[60px] lg:blur-[90px] bg-[#FF9E00]/5 animate-orb-drift pointer-events-none" style={{animationDelay:'-2s'}} />
 
       {/* ── Content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 pt-28 pb-20 lg:pt-36 lg:pb-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-5 lg:px-10 pt-28 pb-20 lg:pt-36 lg:pb-28">
         <div className="text-center">
 
           {/* FOMO Badge */}
@@ -223,7 +223,7 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.06, y: -2 }}
               whileTap={{ scale: 0.97 }}
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-solar to-[#FF9E00] text-white font-heading font-semibold text-[15px] tracking-wide shadow-xl shadow-solar/25 hover:shadow-solar/45 transition-shadow"
+              className="group inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-solar to-[#FF9E00] text-white font-heading font-semibold text-[13px] sm:text-[15px] tracking-wide shadow-xl shadow-solar/25 hover:shadow-solar/45 transition-shadow w-full sm:w-auto justify-center"
             >
               <TrendingUp className="w-5 h-5" />
               Join Free Now
@@ -231,7 +231,7 @@ export default function HeroSection() {
             </motion.a>
             <a
               href="#steps"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl glass text-white font-heading font-medium text-[14px] tracking-wide hover:bg-white/8 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl glass text-white font-heading font-medium text-[13px] sm:text-[14px] tracking-wide hover:bg-white/8 transition-all hover:scale-105 w-full sm:w-auto justify-center"
             >
               <Zap className="w-4 h-4 text-solar" />
               See How It Works
@@ -243,15 +243,15 @@ export default function HeroSection() {
             initial={{ opacity:0 }}
             animate={{ opacity:1 }}
             transition={{ delay: 1 }}
-            className="mt-12 relative overflow-hidden border-t border-b border-white/5 py-3"
+            className="mt-8 sm:mt-12 relative overflow-hidden border-t border-b border-white/5 py-3 max-w-full"
           >
-            <div className="flex gap-10 w-max animate-ticker whitespace-nowrap">
+            <div className="flex gap-6 sm:gap-10 w-max animate-ticker whitespace-nowrap">
               {['TikTok', '★', 'Instagram', '★', 'YouTube', '★', '1K Followers', '★', 'Free to Join', '★', 'PayPal Withdrawal', '★', '$8,600+ Earnings', '★', 'Zero Investment', '★',
                 'TikTok', '★', 'Instagram', '★', 'YouTube', '★', '1K Followers', '★', 'Free to Join', '★', 'PayPal Withdrawal', '★', '$8,600+ Earnings', '★', 'Zero Investment', '★'
               ].map((item, i) => (
                 <span
                   key={i}
-                  className={`text-[11px] font-heading tracking-[0.16em] uppercase ${item === '★' ? 'text-solar' : 'text-zinc-muted'}`}
+                  className={`text-[10px] sm:text-[11px] font-heading tracking-[0.14em] sm:tracking-[0.16em] uppercase ${item === '★' ? 'text-solar' : 'text-zinc-muted'}`}
                 >
                   {item}
                 </span>
@@ -264,17 +264,17 @@ export default function HeroSection() {
             initial={{ opacity:0, y:35 }}
             animate={{ opacity:1, y:0 }}
             transition={{ duration:.85, delay: .9 }}
-            className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 max-w-3xl mx-auto"
+            className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-4 max-w-3xl mx-auto"
           >
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 whileHover={{ y:-5, scale:1.03 }}
                 transition={{ type:'spring', stiffness:300, damping:20 }}
-                className="glass rounded-2xl p-5 text-center group hover:glass-solar transition-all cursor-default card-3d"
+                className="glass rounded-2xl p-3 sm:p-5 text-center group hover:glass-solar transition-all cursor-default card-3d"
               >
                 <stat.icon className="w-5 h-5 text-solar mx-auto mb-2.5 group-hover:scale-110 transition-transform" />
-                <div className="font-heading font-bold text-2xl lg:text-3xl text-white leading-none">
+                <div className="font-heading font-bold text-lg sm:text-2xl lg:text-3xl text-white leading-none">
                   {stat.value}
                 </div>
                 <div className="text-[10px] font-body font-medium text-zinc-muted mt-1.5 uppercase tracking-[0.14em]">
